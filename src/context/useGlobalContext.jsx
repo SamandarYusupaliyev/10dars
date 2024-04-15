@@ -18,10 +18,10 @@ export function GlobalContextProvider ({children}){
       navbarColor:"red",
     })
 
-    dispatch({
-     type:"CHANGE_COLOR",
-     payload:"green",
-    })
+    // dispatch({
+    //  type:"CHANGE_COLOR",
+    //  payload:"green",
+    // })
     return(<GlobalContext.Provider value={{...state}}>
         {children}
     </GlobalContext.Provider>
