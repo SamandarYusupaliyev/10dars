@@ -5,7 +5,7 @@ export const GlobalContext =createContext()
 const changeState =(state,action)=>{
  switch(action.type){
    case "CHANGE_COLOR":
-      return{...state,navbarColor:action.payload}
+      return{...state,navbarBgColor:action.payload}
     case "CHANGE_USER":
       return {...state,user:action.payload}
     default:
@@ -15,15 +15,11 @@ const changeState =(state,action)=>{
 export function GlobalContextProvider ({children}){
   const [state,dispatch] =useReducer(changeState,{
     user:null,
-    navbarColor:"red",
+    navbarBgColor:"#ccc",
   })
 
-  dispatch({
-    type:"CHANGE_COLOR",
-    payload:"green",
-  })
   return(
-    <GlobalContext.Provider value={{...state}}>
+    <GlobalContext.Provider value={{...state,dispatch}}>
       {children}
     </GlobalContext.Provider>
   )

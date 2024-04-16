@@ -5,10 +5,12 @@ import { useContext } from "react"
 import { GlobalContext} from "../context/useGlobalContext";
 
 function Navbar() {
-  const data =useContext(GlobalContext)
-  console.log(data);
+  const {dispatch,navbarBgColor} =useContext(GlobalContext)
   return (
-    <div className="bg-base-300">
+    <div 
+    onClick={()=>dispatch({type:"CHANGE_COLOR",payload:"red"})} 
+    className="" 
+    style={{backgroundColor:navbarBgColor}}>
         <div className="navbar align-element">
             <div className="navbar-start">
                 <Link to ="/" className="btn btn-primary lg:btn-lg hidden lg:flex ">MyKitchen</Link>
