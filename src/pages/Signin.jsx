@@ -1,6 +1,8 @@
 function Signin() {
   return (
-    <div>Signin</div>
+    <div>
+      <h1>Signin</h1>
+    </div>
   )
 }
 

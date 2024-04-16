@@ -11,6 +11,7 @@ import Signup from "./pages/Signup"
 // components
 import ProtectedRotes from './components/ProtectedRotes'
 import Navbar from './components/Navbar'
+import NavLinks from './components/NavLinks'
 
 
 function App(){

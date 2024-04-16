@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <div>
+    <div className="align-element">
       <h1>Home</h1>
     </div>
   )
