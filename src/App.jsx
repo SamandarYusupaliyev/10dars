@@ -7,6 +7,8 @@ import MainLayout from "./Layout/MainLayout"
 import Home from "./pages/Home"
 import  Signin from "./pages/Signin"
 import Signup from "./pages/Signup"
+import About from "./pages/About"
+import Contact from "./pages/Contact"
 
 // components
 import ProtectedRotes from './components/ProtectedRotes'
