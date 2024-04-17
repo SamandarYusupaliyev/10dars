@@ -4,6 +4,7 @@ import NavLinks from "./NavLinks"
 import { useContext } from "react"
 import { GlobalContext} from "../context/useGlobalContext";
 
+
 function Navbar() {
   const {navbarBgColor} =useContext(GlobalContext)
   return (

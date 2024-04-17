@@ -7,11 +7,10 @@ const colors =["#1E0342","#F0EBE3","#912BBC"]
 
 function ThemeContainer() {
   const {dispatch} =useContext(GlobalContext)
-
-  const changeColor =()=>{
+  const changeColor =(color )=>{
     dispatch({
       type:"CHANGE_NAVBAR_BG",
-      payload:"color",
+      payload:color,
     })
   }
   return (
@@ -34,7 +33,9 @@ function ThemeContainer() {
          <div>
            <label className="swap swap-rotate">
               {/* this hidden checkbox controls the state */}
-              <input type="checkbox" />
+              <input type="checkbox"
+               />
+
                 {/* sun icon */}
                 <FaSun  className="swap-on fill-current w-7 h-7" />
                {/* moon icon */}
