@@ -1,11 +1,31 @@
 import { FaSun,FaMoon } from "react-icons/fa6";
-import { useContext} from "react";
+import { useContext, useEffect, useState} from "react";
 import {GlobalContext} from "../context/useGlobalContext";
 
-const colors =["#1E0342","#F0EBE3","#912BBC"]
+const colors =["#496989","#7469B6","#912BBC"]
 
+const themes ={
+  winter:"winter",
+  dracula:"dracula",
+}
+
+
+function darkModeFromLocalStoage(){
+  return localStorage.getItem("mode") || themes.winter
+}
 
 function ThemeContainer() {
+  const [theme,setTheme] =useState(darkModeFromLocalStoage)
+  const handleClick =() =>{
+    const newTheme =theme==themes.winter ? themes.dracula:themes.winter
+    setTheme(newTheme)
+    localStorage.setItem("mode",newTheme)
+  }
+  useEffect(()=>{
+    document.documentElement.setAttribute("data-theme",theme)
+  },[theme])
+
+
   const {dispatch} =useContext(GlobalContext)
   const changeColor =(color )=>{
     dispatch({
@@ -34,7 +54,8 @@ function ThemeContainer() {
            <label className="swap swap-rotate">
               {/* this hidden checkbox controls the state */}
               <input type="checkbox"
-               />
+                onClick={handleClick}
+              />
 
                 {/* sun icon */}
                 <FaSun  className="swap-on fill-current w-7 h-7" />
