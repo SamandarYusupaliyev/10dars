@@ -11,7 +11,7 @@ function ThemeContainer() {
   const changeColor =()=>{
     dispatch({
       type:"CHANGE_NAVBAR_BG",
-      payload:color, 
+      payload:"color",
     })
   }
   return (

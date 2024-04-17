@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import NavLinks from "./NavLinks"
-
+  
 import { useContext } from "react"
 import { GlobalContext} from "../context/useGlobalContext";
 
