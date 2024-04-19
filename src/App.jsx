@@ -14,13 +14,18 @@ import Signup from "./pages/Signup"
 import ProtectedRotes from './components/ProtectedRotes'
 import Navbar from './components/Navbar'
 
+//context
+import { useContext } from 'react'
+import { GlobalContext } from './context/useGlobalContext'
+
 
 function App(){
+  const {user}=useContext(GlobalContext)
   const routes =createBrowserRouter([
     {
       path:"/",
        element:(
-       <ProtectedRotes user={true}>
+       <ProtectedRotes user={user}>
          <MainLayout/>
        </ProtectedRotes>),
       children:[

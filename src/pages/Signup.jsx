@@ -1,5 +1,6 @@
 import { useSignup } from "../hooks/useSignup"
 import { FcGoogle } from "react-icons/fc";
+
 function Signup() {
   const {singnupWithGoogle,user,error}=useSignup()
   console.log(user);
