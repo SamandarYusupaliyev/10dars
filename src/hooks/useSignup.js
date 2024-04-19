@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { GlobalContext} from "../context/useGlobalContext"
 
 function useSignup() {
-    const {user,setUser}=useState(null)
+    const [user,setUser]=useState(null)
     const {error,setError}=useState(null)
     const {dispatch}=useContext( GlobalContext)
     const singnupWithGoogle =()=>{

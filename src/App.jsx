@@ -1,4 +1,4 @@
-import { createBrowserRouter,RouterProvider } from 'react-router-dom'
+import { createBrowserRouter,RouterProvider,Navigate} from 'react-router-dom'
 
 // Layout
 import MainLayout from "./Layout/MainLayout"
@@ -45,11 +45,11 @@ function App(){
     },
     {
       path:"/signin",
-      element :<Signin/>,
+      element :user ? <Navigate to="/"/>:<Signin/>,
     },
     {
       path:"/signup",
-      element :<Signup/>,
+      element : user ?<Navigate to="/"/>:<Signup/>,
     },
   ])
   return <RouterProvider router={routes}/>
