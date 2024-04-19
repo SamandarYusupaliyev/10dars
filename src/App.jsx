@@ -45,11 +45,11 @@ function App(){
     },
     {
       path:"/signin",
-      element :user ? <Navigate to="/"/>:<Signin/>,
+      element:user ? <Navigate to="/" />:<Signin/>,
     },
     {
       path:"/signup",
-      element : user ?<Navigate to="/"/>:<Signup/>,
+      element:user ? <Navigate to="/" />:<Signup/>,
     },
   ])
   return <RouterProvider router={routes}/>
