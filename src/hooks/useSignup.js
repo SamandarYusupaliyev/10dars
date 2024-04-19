@@ -7,7 +7,7 @@ import { GlobalContext} from "../context/useGlobalContext"
 
 function useSignup() {
     const [user,setUser]=useState(null)
-    const {error,setError}=useState(null)
+    const [error,setError]=useState(null)
     const {dispatch}=useContext( GlobalContext)
     const singnupWithGoogle =()=>{
         const provider =new GoogleAuthProvider()
