@@ -1,10 +1,15 @@
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { getAuth } from "firebase/auth";
-
+import { useSignup } from "../hooks/useSignup"
+import { FcGoogle } from "react-icons/fc";
 function Signup() {
-  signInWithPopup (auht,provider)
+  const {singnupWithGoogle,user,error}=useSignup()
+  console.log(user);
   return (
-    <div>Sigup</div>
+    <div className="min-h-screen grid place-items-center  ">
+      <button onClick={singnupWithGoogle} className="btn btn-secondary">
+        <FcGoogle className="text-3xl"/>
+        <span className="text-2xl">Google</span>
+      </button>
+    </div>
   )
 }
 
