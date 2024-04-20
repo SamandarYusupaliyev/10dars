@@ -7,7 +7,7 @@ function Signup() {
    console.log(user);
   return (
     <div className="min-h-screen grid place-items-center">
-        <button onChangeCapture={signupWihtGoogle} className="btn btn-secondary">
+        <button onClick={signupWihtGoogle} className="btn btn-secondary">
         <FcGoogle className="text-3xl"/>
          Google
         </button>
