@@ -38,8 +38,8 @@ function Navbar() {
               <NavLinks/>
             </div>
             <div className="navbar-end">
+            {user && <p className="mr-3">{user.displayName}</p>}
             <div className="dropdown dropdown-end">
-              {user && <p className="flex">{user.displayName}</p>}
             <div tabIndex={0} 
               role="button" 
               className="btn btn-ghost btn-circle avatar">
