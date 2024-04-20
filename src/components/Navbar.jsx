@@ -29,12 +29,12 @@ function Navbar() {
               <div className="dropdown lg:hidden">
                   <button tabIndex={0} role="button"  className="btn  btn-primary lg:btn-lg mt-3">MK</button>
                   <div tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                     <NavLinks/>
+                    <NavLinks/>
                   </div>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <NavLinks/>
+              <NavLinks/>
             </div>
             <div className="navbar-end">
             <div className="dropdown dropdown-end">
