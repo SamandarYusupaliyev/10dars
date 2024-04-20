@@ -1,7 +1,7 @@
 function About() {
   return (
    <div className="align-element">
-      <h1 className="">About</h1>
+      <h1 className="text-3xl font-bold mb-4 text-slate-900">About</h1>
       <p className="">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         Eum,reprehenderit. Consequatur maxime quisquam unde! 
