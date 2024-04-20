@@ -69,9 +69,6 @@ function App(){
 })
 },[])
 
-
-
-
   return <>{authChange && <RouterProvider router={routes}/>}</>
 }
 
