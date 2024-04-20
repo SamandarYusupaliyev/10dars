@@ -4,8 +4,8 @@ import NavLinks from "./NavLinks"
 import {signOut} from "firebase/auth"
 import {auth} from '../firebase/firebaseConfig'
   
-import { useContext } from "react"
-import { GlobalContext} from "../context/useGlobalContext";
+import { useContext} from "react"
+import { GlobalContex} from "../context/useGlobalContext";
 
 
 function Navbar() {
