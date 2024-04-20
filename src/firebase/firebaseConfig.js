@@ -1,14 +1,13 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
-
 const firebaseConfig = {
-  apiKey: "AIzaSyBhwOz8iuCHQPKwdDoNM2mfAQAbWb5TSm4",
-  authDomain: "my-kitchen-58954.firebaseapp.com",
-  projectId: "my-kitchen-58954",
-  storageBucket: "my-kitchen-58954.appspot.com",
-  messagingSenderId: "758307142493",
-  appId: "1:758307142493:web:21f53c68e112c4c2bcc6b4"
+  apiKey: "AIzaSyDjNUaowrFsMAlfoTiOZhnVMASyXHjUjh8",
+  authDomain: "my-kitchen-726d9.firebaseapp.com",
+  projectId: "my-kitchen-726d9",
+  storageBucket: "my-kitchen-726d9.appspot.com",
+  messagingSenderId: "633749117357",
+  appId: "1:633749117357:web:bc64d526564387d21de924"
 };
 
 // Initialize Firebase
