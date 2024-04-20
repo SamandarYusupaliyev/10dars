@@ -9,7 +9,7 @@ function useSignup() {
     const [user,setUser]=useState(null)
     const [error,setError]=useState(null)
     const {dispatch}=useContext( GlobalContext)
-    const singnupWithGoogle =()=>{
+    const singupWithGoogle =()=>{
         const provider =new GoogleAuthProvider()
         signInWithPopup (auth,provider)
         .then((result) => {
@@ -28,7 +28,7 @@ function useSignup() {
         });
     }
 
-  return {singnupWithGoogle,user,error}
+  return {singupWithGoogle,user,error}
 }
 
 export  {useSignup}
