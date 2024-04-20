@@ -2,10 +2,8 @@ function Contact() {
   return (
    <div className="align-element">
       <h1 className="text-3xl font-bold mb-4 text-slate-900">Contact</h1>
-      <p className="">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Beatae, quidem soluta earum alias nesciunt saepe accusamus explicabo nostrum eaque in quis ratione numquam assumenda velit quia,
-        perspiciatis fugit tenetur! Veniam?
+      <p className="text-base font-normal text-slate-500 ">
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores tempore corporis possimus omnis iusto nostrum quo esse fugiat natus perferendis fuga quod neque doloribus odit nam quasi nisi libero ex delectus facere quas corrupti itaque, veritatis voluptates. Quis deserunt perspiciatis voluptas aspernatur officia eveniet cum! Officia voluptatem itaque laborum minima.
       </p>
     </div>
   )
