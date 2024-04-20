@@ -15,12 +15,16 @@ import ProtectedRotes from './components/ProtectedRotes'
 import Navbar from './components/Navbar'
 
 //context
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { GlobalContext } from './context/useGlobalContext'
 
 
+// firebase
+import { auth } from './firebase/firebaseConfig'
+import { onAuthStateChanged } from 'firebase/auth'
+
 function App(){
-  const {user}=useContext(GlobalContext)
+  const {user,dispatch,authChange}=useContext(GlobalContext)
   const routes =createBrowserRouter([
     {
       path:"/",
@@ -52,7 +56,23 @@ function App(){
       element:user ? <Navigate to="/" />:<Signup/>,
     },
   ])
-  return <RouterProvider router={routes}/>
+ 
+  useEffect(()=>{
+    onAuthStateChanged(auth, (user) => {
+  dispatch({
+    type:"SIGN_IN",
+    payload:user,
+  });
+  dispatch({
+    type:"AUTH_CHANGE",
+  })
+})
+},[])
+
+
+
+
+  return <>{authChange && <RouterProvider router={routes}/>}</>
 }
 
 export default App
