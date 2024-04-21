@@ -48,6 +48,10 @@ function App(){
           element:<About/>,
         },
         {
+          path:'/create',
+          element:<Create/>
+        },
+        {
           path:'/contact',
           element:<Contact/>,
         },
