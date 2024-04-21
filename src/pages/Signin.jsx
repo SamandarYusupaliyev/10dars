@@ -1,16 +1,36 @@
 import { useSignup } from "../hooks/useSignup";
+import { useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link,Form,useActionData } from "react-router-dom";
 
 import FormInput from "../components/FormInput";
+import useLogin from "../hooks/useLogin";
+
+export const action = async ({ request }) => {
+  let formData = await request.formData();
+  let email = formData.get("Email");
+  let password = formData.get("Password");
+
+  return {email,password};
+};
 
 function Signin() {
+  const userSignin =useActionData()
+  const {signInEmailAndPassword}=useLogin()
+
+  useEffect(()=>{
+    if(userSignin)
+    signInEmailAndPassword(userSignin.email,userSignin.password)
+  },[userSignin])
+
+
   const { signupWihtGoogle, user, error } = useSignup();
   return (
     <div className="min-h-screen grid place-items-center">
       <div className="max-w-96 w-full">
-        <FormInput type="email" label="Email:" />
-        <FormInput type="password" label="Password:" />
+       <Form method="post">
+       <FormInput type="email" label="Email:" name="Email" />
+        <FormInput type="password" label="Password:" name="Password" />
         <div>
           <button className="btn btn-secondary w-full mb-3" type="sumbit">
             Sumbit
@@ -30,6 +50,7 @@ function Signin() {
             </Link>
           </p>
         </div>
+       </Form>
       </div>
     </div>
   );

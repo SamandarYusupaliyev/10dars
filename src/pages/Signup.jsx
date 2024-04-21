@@ -1,22 +1,25 @@
 import { useSignup } from "../hooks/useSignup";
 import { FcGoogle } from "react-icons/fc";
-import { Link, Form, useLoaderData } from "react-router-dom";
+import { Link, Form, useActionData } from "react-router-dom";
 import FormInput from "../components/FormInput";
+import { useEffect } from "react";
 
 export const action = async ({ request }) => {
   let formData = await request.formData();
   let name = formData.get("Name");
   let email = formData.get("Email");
   let password = formData.get("Password");
-  console.log(name);
 
   return {name,email,password};
 };
 
 function Signup() {
-  const userSignup =useLoaderData()
-  console.log(userSignup);
-  const { signupWihtGoogle, user, error } = useSignup();
+  const userSignup =useActionData()
+  const { signupWihtGoogle,signupWithPasswordAndEmail, user, error } = useSignup();
+  useEffect(()=>{
+    if(userSignup)
+    signupWithPasswordAndEmail(userSignup.email,userSignup.password)
+  },[userSignup])
   return (
     <div className="min-h-screen grid place-items-center">
       <div className="max-w-96 w-full">
