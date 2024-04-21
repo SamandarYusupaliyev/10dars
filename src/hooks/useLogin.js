@@ -13,7 +13,7 @@ function useLogin() {
 
    const {dispatch} =useContext(GlobalContext)
 
-    const sigInEmailAndPassword=(email,password)=>{
+    const signInEmailAndPassword=(email,password)=>{
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
@@ -26,7 +26,7 @@ function useLogin() {
           setError(errorMessage);
         });
     }
-    return {sigInEmailAndPassword,user,error}
+    return {signInEmailAndPassword,user,error}
   }
 
 export default useLogin
