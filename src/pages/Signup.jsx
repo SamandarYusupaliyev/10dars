@@ -17,8 +17,9 @@ function Signup() {
   const userSignup =useActionData()
   const { signupWihtGoogle,signupWithPasswordAndEmail, user, error } = useSignup();
   useEffect(()=>{
-    if(userSignup)
+    if(userSignup){
     signupWithPasswordAndEmail(userSignup.email,userSignup.password)
+    }
   },[userSignup])
   return (
     <div className="min-h-screen grid place-items-center">

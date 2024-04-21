@@ -19,8 +19,9 @@ function Signin() {
   const {signInEmailAndPassword}=useLogin()
 
   useEffect(()=>{
-    if(userSignin)
+    if(userSignin){
     signInEmailAndPassword(userSignin.email,userSignin.password)
+    }
   },[userSignin])
 
 
