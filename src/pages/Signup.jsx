@@ -15,7 +15,7 @@ export const action = async ({ request }) => {
 
 function Signup() {
   const userSignup =useActionData()
-  const { signupWihtGoogle,signupWithPasswordAndEmail, user, error } = useSignup();
+  const {signupWithGoogle,signupWithPasswordAndEmail, user, error } = useSignup();
   useEffect(()=>{
     if(userSignup){
     signupWithPasswordAndEmail(userSignup.email,userSignup.password)
@@ -34,7 +34,7 @@ function Signup() {
             </button>
             <button
               type="button"
-              onClick={signupWihtGoogle}
+              onClick={signupWithGoogle}
               className="btn btn-secondary w-full mb-5"
             >
               <FcGoogle className="text-3xl" />

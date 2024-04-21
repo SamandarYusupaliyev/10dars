@@ -14,7 +14,7 @@ function useSignup() {
 
   const {dispatch} =useContext(GlobalContext)
 
-  const signupWihtGoogle =()=>{
+  const signupWithGoogle =()=>{
   const provider =new GoogleAuthProvider()
   signInWithPopup(auth, provider)
   .then((result) => {
@@ -42,7 +42,7 @@ function useSignup() {
       setError(errorMessage)
     });
    }
-  return {signupWihtGoogle,signupWithPasswordAndEmail,user,error}
+  return {signupWithGoogle,signupWithPasswordAndEmail,user,error}
 }
 
 export {useSignup}

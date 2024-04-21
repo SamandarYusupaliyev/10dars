@@ -25,7 +25,7 @@ function Signin() {
   },[userSignin])
 
 
-  const { signupWihtGoogle, user, error } = useSignup();
+  const { signupWithGoogle, user, error } = useSignup();
   return (
     <div className="min-h-screen grid place-items-center">
       <div className="max-w-96 w-full">
