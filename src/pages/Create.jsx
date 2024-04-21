@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Create() {
   return (
     <div>
@@ -73,3 +71,5 @@ function Create() {
 }
 
 export default Create;
+
+
