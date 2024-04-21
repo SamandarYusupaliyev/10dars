@@ -38,7 +38,7 @@ function Signin() {
           </button>
           <button
             type="button"
-            onClick={signupWihtGoogle}
+            onClick={signupWithGoogle}
             className="btn btn-secondary w-full mb-5"
           >
             <FcGoogle className="text-3xl" />
