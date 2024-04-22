@@ -10,6 +10,7 @@ import Contact from "./pages/Contact"
 import  Signin from "./pages/Signin"
 import Signup from "./pages/Signup"
 import Create from "./pages/Create"
+import SingleRecipie from './pages/SingleRecipe'
 
 // components
 import ProtectedRotes from './components/ProtectedRotes'
@@ -28,6 +29,10 @@ import { onAuthStateChanged } from 'firebase/auth'
 import { action as signupAction } from './pages/Signup'
 import { action as signinAction } from './pages/Signin'
 import { action as createAction } from './pages/Create'
+import SingleRecipe from './pages/SingleRecipe'
+
+// loader
+import {loader as singleRecipieLoader} from './pages/SingleRecipe'
 
 
 function App(){
@@ -56,6 +61,11 @@ function App(){
           path:'/create',
           element: <Create/>,
           action:createAction,
+        },
+        {
+          path:"/singleRecipie/:id",
+          element:<SingleRecipie/>,
+          loader:singleRecipieLoader,
         }
       ]
     },

@@ -1,6 +1,7 @@
-import { Form, useActionData } from "react-router-dom"
+import { Form, useActionData,useNavigate } from "react-router-dom"
 import FormInput from "../components/FormInput"
 import { useEffect, useState } from "react"
+import { useCreateRecipie } from "../hooks/useCreateRecipie"
 
 // action
 
@@ -16,10 +17,13 @@ export const action =async({request})=>{
 
 
 function Create() {
- const createData =useActionData()
- console.log(createData);
+const {data,addNewDoc}  =useCreateRecipie()
+ const createData =useActionData();
  const [inredients,setIngredients]=useState([])
  const [inredient,setIngredient]=useState("")
+
+ const navigate =useNavigate()
+
  const addIngredient =(e)=>{
  e.preventDefault()
  console.log(inredient);
@@ -33,14 +37,18 @@ function Create() {
 }
 
 useEffect(()=>{
-   if(createData){
+   if(createData && !data){
       const newRecipe ={
          ...createData,
          inredients,
       }
-      console.log(newRecipe);
+      addNewDoc(newRecipe)
    }
-},[createData])
+
+   if(data){
+     navigate("/");
+   }
+},[createData,data])
 
 
 return (
@@ -67,8 +75,11 @@ return (
                  <button onClick={addIngredient}  className="btn btn-secondary mt-5">Add</button>
                  </div>
                  <p className="text-left -mt-2 mb-3">
-                   Inredients
-                  <span>:Tuz Go'sht</span>
+                   Inredients:
+                  {inredients.map((ing)=>{
+                     return<span key={ing}>{ing},</span>
+                  })}
+               
                  </p>
                </div>
             <FormInput name="cookingTime" label="Cooking Time" type="number"/>

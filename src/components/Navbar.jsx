@@ -10,8 +10,6 @@ import {GlobalContext} from "../context/useGlobalContext"
 
 function Navbar() {
   const {navbarBgColor,user} =useContext(GlobalContext)
-  console.log(user);
-
   const signOutFunc =()=>{
     signOut(auth)
     .then(()=>{
