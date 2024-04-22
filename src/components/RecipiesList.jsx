@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
+import {IoTrashOutline} from "react-icons/io5"
+import { data } from "autoprefixer"
 function RecipiesList({recipies}) {
-
   return <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
     {recipies.map((recipie)=>{
       return (
@@ -11,9 +12,12 @@ function RecipiesList({recipies}) {
         <div className="card-body">
         <h2 className="text-2xl font-bold">{recipie.title}</h2>
         <p className="line-clamp-3 mb-2">{recipie.method}</p>
-       <div className="card-actions justify-end">
-      <button className="btn btn-primary w-full">More</button>
-        </div>
+       <div className="card-actions flex-nowrap items-center">
+      <button className="btn btn-primary ">More</button>
+       <button onClick={()=>deleteRecipie(recipie.id)} className="btn btn-secondary">
+        <IoTrashOutline/>
+        </button>
+      </div>
       </div>
       </div>
         </Link>
