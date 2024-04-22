@@ -1,10 +1,9 @@
-import { Form } from "react-router-dom";
-import FormInput from "../components/FormInput";
+import React from 'react'
 
-function Create(){
-   return(
-      <div>
-         
-      </div>
-   )
+function Create() {
+  return (
+    <div>Create</div>
+  )
 }
+
+export default Create

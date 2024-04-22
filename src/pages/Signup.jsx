@@ -7,10 +7,11 @@ import { useEffect } from "react";
 export const action = async ({ request }) => {
   let formData = await request.formData();
   let name = formData.get("Name");
+  let photo = formData.get("Photo");
   let email = formData.get("Email");
   let password = formData.get("Password");
 
-  return {name,email,password};
+  return {name,photo,email,password};
 };
 
 function Signup() {
@@ -18,7 +19,7 @@ function Signup() {
   const {signupWithGoogle,signupWithPasswordAndEmail, user, error } = useSignup();
   useEffect(()=>{
     if(userSignup){
-    signupWithPasswordAndEmail(userSignup.email,userSignup.password)
+    signupWithPasswordAndEmail(userSignup.name,userSignup.photo,userSignup.email,userSignup.password)
     }
   },[userSignup])
   return (
@@ -26,6 +27,7 @@ function Signup() {
       <div className="max-w-96 w-full">
         <Form method="post">
           <FormInput type="text" label="Name:" name="Name" />
+          <FormInput type="url" label="Photo Url:" name="Photo" />
           <FormInput type="email" label="Email:" name="Email" />
           <FormInput type="password" label="Password:" name="Password" />
           <div>
