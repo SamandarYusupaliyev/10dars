@@ -2,7 +2,7 @@
   "recipies": [
     {
       "id": "1",
-      "img": "https://main-cdn.sbermegamarket.ru/hlr-system/-17/321/304/386/131/158/100054460936b0.png",
+      "image": "https://main-cdn.sbermegamarket.ru/hlr-system/-17/321/304/386/131/158/100054460936b0.png",
       "title": "Palov",
       "ingredients": [
         "guruch",
@@ -20,7 +20,7 @@
     {
       "id": "2",
       "title": "Mastava",
-      "img": "https://zira.uz/wp-content/uploads/2018/02/mastava-3.jpg",
+      "image": "https://zira.uz/wp-content/uploads/2018/02/mastava-3.jpg",
       "ingredients": [
         "guruch",
         "sabzi",
@@ -39,7 +39,7 @@
     {
       "id": "3",
       "title": "Sho'rva",
-      "img": "https://img1.russianfood.com/dycontent/images_upl/362/big_361362.jpg",
+      "image": "https://img1.russianfood.com/dycontent/images_upl/362/big_361362.jpg",
       "ingredients": [
         "sabzi",
         "go'sht",
