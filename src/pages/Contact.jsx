@@ -1,11 +1,20 @@
 function Contact() {
-  return (
-   <di>
-      <h1 className="text-3xl font-bold mb-4 text-blue-600">Contact</h1>
-      <p className="text-base font-normal text-gray-500  ">
-         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores tempore corporis possimus omnis iusto nostrum quo esse fugiat natus perferendis fuga quod neque doloribus odit nam quasi nisi libero ex delectus facere quas corrupti itaque, veritatis voluptates. Quis deserunt perspiciatis voluptas aspernatur officia eveniet cum! Officia voluptatem itaque laborum minima.
-      </p>
-    </di>
+  return(
+        <div className="flex items-center justify-center">
+        <button className="btn" onClick={()=>document.getElementById('my_modal_5').showModal()}>open modal</button>
+         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+             <div className="modal-box">
+            <h3 className="font-bold text-lg">Hello!</h3>
+             <p className="py-4">Press ESC key or click the button below to close</p>
+             <div className="modal-action">
+              <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn">Close</button>
+          </form>
+             </div>
+          </div>
+        </dialog>
+    </div>
   )
 }
 
