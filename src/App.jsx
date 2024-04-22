@@ -25,9 +25,10 @@ import { auth } from './firebase/firebaseConfig'
 import { onAuthStateChanged } from 'firebase/auth'
 
 // action
-
 import { action as signupAction } from './pages/Signup'
 import { action as signinAction } from './pages/Signin'
+import { action as createAction } from './pages/Create'
+
 
 function App(){
   const {user,dispatch,authChange}=useContext(GlobalContext)
@@ -53,7 +54,8 @@ function App(){
         },
         {
           path:'/create',
-          element: <Create/>
+          element: <Create/>,
+          action:createAction,
         }
       ]
     },

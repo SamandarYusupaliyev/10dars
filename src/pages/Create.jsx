@@ -1,14 +1,46 @@
-import { Form } from "react-router-dom"
+import { Form, useActionData } from "react-router-dom"
 import FormInput from "../components/FormInput"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 // action
-function Create() {
- const [Inredients,setIngredients]=useState([])
- const addIngredient =(e)=>{
- e.preventDefault()
+
+export const action =async({request})=>{
+   let formData = await request.formData();
+   const title =formData.get("title")
+   const method=formData.get("method")
+   const image =formData.get("image")
+   const cookingTime =formData.get("cookingTime")
+
+   return{title,method,image,cookingTime}
 }
 
+
+function Create() {
+ const createData =useActionData()
+ console.log(createData);
+ const [inredients,setIngredients]=useState([])
+ const [inredient,setIngredient]=useState("")
+ const addIngredient =(e)=>{
+ e.preventDefault()
+ console.log(inredient);
+
+ if(!inredients.includes(inredient)){
+   setIngredients((prev)=>{
+      return [...prev,inredient]
+   })
+ }
+ setIngredient("")
+}
+
+useEffect(()=>{
+   if(createData){
+      const newRecipe ={
+         ...createData,
+         inredients,
+      }
+      console.log(newRecipe);
+   }
+},[createData])
 
 
 return (
@@ -19,7 +51,19 @@ return (
             <FormInput name="title" label="Title" type="text"/>
                <div className="flex justify-center flex-col">
                  <div className="flex items-center gap-5 w-full">
-                 <FormInput name="title" label="Ingredient" type="text"/>
+                 <label className="form-control w-full mb-3 ">
+                  <div className="label">
+                     <span className="label-text">Ingredient</span>
+                  </div>
+                  <input 
+                  onChange={(e)=>setIngredient(e.target.value)}
+                  type="text"
+                  name="ingredients"
+                  placeholder="Type here" 
+                  className="input input-bordered w-full" 
+                  value={inredient}
+                   />
+                  </label>
                  <button onClick={addIngredient}  className="btn btn-secondary mt-5">Add</button>
                  </div>
                  <p className="text-left -mt-2 mb-3">
@@ -27,7 +71,7 @@ return (
                   <span>:Tuz Go'sht</span>
                  </p>
                </div>
-            <FormInput name="cooking Time" label="Cooking Time" type="number"/>
+            <FormInput name="cookingTime" label="Cooking Time" type="number"/>
             <FormInput name="method" label="Method" type="text"/>
             <FormInput name="image" label="Image" type="url"/>
             <div>
