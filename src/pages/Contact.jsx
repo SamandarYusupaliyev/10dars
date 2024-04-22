@@ -7,7 +7,7 @@ function Contact() {
       <div className="chat chat-start">
   <div className="chat-image avatar">
     <div className="w-10 rounded-full">
-      <img alt="Tailwind CSS chat bubble component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <img alt="Tailwind CSS chat bubble component" src="https://lh3.googleusercontent.com/a/ACg8ocJLgdSckEcZrtgNDqZxjJfXzzgNHsnamY8YRPf8Sb6EIa8j9bQ=s96-c" />
     </div>
   </div>
   <div className="chat-header">
