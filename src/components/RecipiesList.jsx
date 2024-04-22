@@ -6,10 +6,11 @@ function RecipiesList({recipies}) {
       return (
       <li key={recipie.id}>
         <Link to={`/singleRecipie/${recipie.id}`}>
-        <div className="card w-96 bg-base-100 shadow-xl mt-5">
+        <div className="card w-96 bg-base-100 shadow-xl mt-4">
        <figure><img src={recipie.image} alt="Shoes" /></figure>
         <div className="card-body">
-        <h2 className=" text-center text-2xl font-bold">{recipie.title}</h2>
+        <h2 className="text-2xl font-bold">{recipie.title}</h2>
+        <p className="line-clamp-3 mb-2">{recipie.method}</p>
        <div className="card-actions justify-end">
       <button className="btn btn-primary w-full">More</button>
         </div>

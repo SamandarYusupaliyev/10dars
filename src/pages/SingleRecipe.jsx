@@ -23,8 +23,8 @@ function SingleRecipe() {
     <>
     {data && (
       <div>
-        <h1>{data.title}</h1>
-        <img src={data.image} alt="" />
+        <h1  className="text-3xl mb-4">{data.title}</h1>
+        <img className="w-full h-[460px]" src={data.image} alt="" />
       </div>
     )}
    </>
