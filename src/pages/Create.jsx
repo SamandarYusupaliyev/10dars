@@ -18,7 +18,7 @@ function Create() {
                  </div>
                  <p className="text-left -mt-2 mb-3">
                    Inredients
-                  <span>:Tuz Go'sht</span>
+                  <span>:Tuz,Go'sht</span>
                  </p>
                </div>
             <FormInput name="cooking Time" label="Cooking Time" type="number"/>
