@@ -51,6 +51,10 @@ function App(){
           path:'/contact',
           element:<Contact/>,
         },
+        {
+          path:'/create',
+          element:<Create/>
+        }
       ]
     },
     {
