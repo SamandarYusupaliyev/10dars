@@ -1,6 +1,7 @@
 function Contact() {
   return(
       <div className="flex items-center justify-center">
+        <button className="btn" onClick={()=>document.getElementById('my_modal_5').showModal()}>open modal</button>     
          <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
       <div className="chat chat-start">
@@ -41,7 +42,6 @@ function Contact() {
   </div>
   </div>
   </dialog>
-  <button className="btn" onClick={()=>document.getElementById('my_modal_5').showModal()}>open modal</button>
   </div>
   )
 }
