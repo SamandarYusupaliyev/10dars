@@ -1,6 +1,7 @@
 import {signInWithPopup,
   GoogleAuthProvider,
-  createUserWithEmailAndPassword, } from "firebase/auth";
+  createUserWithEmailAndPassword,
+  updateProfile, } from "firebase/auth";
 import { auth } from "../firebase/firebaseConfig";
 import { useState } from "react";
 
@@ -29,7 +30,7 @@ function useSignup() {
     });
   }
   
-   const signupWithPasswordAndEmail =(email,password)=>{
+   const signupWithPasswordAndEmail =(name,photo,password)=>{
     console.log(email,password);
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
