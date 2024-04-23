@@ -14,7 +14,7 @@ function RecipiesList({recipies}) {
          />
         </figure>
         <div className="card-body relative">
-        <CiHeart className=" absolute w-7 h-7 -top-[200px] right-[20px] cursor-pointer" />
+        <CiHeart className=" absolute w-7 h-7 -top-[200px] right-[20px]  cursor-pointer" />
         <h2 className="text-2xl font-bold -mt-3">{recipie.title}</h2>
         <div className="rating">
           <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 w-4" />
