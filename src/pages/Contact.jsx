@@ -1,7 +1,7 @@
 function Contact() {
   return(
       <div className="flex items-center justify-center flex-col ">
-        <h1 className="text-4xl font-bold w-[540px] text-center">Sevimli restoranlaringizdan <span className="text-4xl font-bold text-violet-700">tez ovqat yetkazib berish</span></h1>
+        <h1 className="text-4xl font-bold w-[540px] text-center mb-10">Sevimli restoranlaringizdan <span className="text-4xl font-bold text-violet-700">tez ovqat yetkazib berish</span></h1>
         <button className="btn" onClick={()=>document.getElementById('my_modal_5').showModal()}>open modal</button>     
          <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
@@ -38,7 +38,7 @@ function Contact() {
   <div className="modal-action">
     <form method="dialog">
       {/* if there is a button in form, it will close the modal */}
-     <button className="btn">Close</button>
+     <button className="btn"><a href="https://uzumtezkor.uz/ru?utm_source=google&utm_medium=cpc&utm_campaign=TEZKOR_ALWN_B2C_TASH_WEB_DM_GOOGLE_SRCH_BRND_TRAFFIC&utm_content=664713444151&utm_term=uzum%20tezkor&gad_source=1&gclid=CjwKCAjwuJ2xBhA3EiwAMVjkVBxhRokPqGNaK2T42fDNW_SigkmkM7lnSaYBWEvQiQRNdx-8mx4FCRoCNTQQAvD_BwE">close</a></button>
    </form>
   </div>
   </div>
