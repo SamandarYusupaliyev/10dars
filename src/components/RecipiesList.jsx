@@ -9,12 +9,12 @@ function RecipiesList({recipies}) {
       return (
       <li key={recipie.id}>
         <div className="card w-96 bg-base-100 shadow-xl mt-4 mb-5">
-        {/* <CiHeart className=" w-7 h-7 -top-3"/> */}
        <figure>
         <img src={recipie.image} alt="Shoes"
          />
         </figure>
-        <div className="card-body">
+        <div className="card-body relative">
+        <CiHeart className=" absolute w-7 h-7 -top-[200px] right-[20px] cursor-pointer" />
         <h2 className="text-2xl font-bold -mt-3">{recipie.title}</h2>
         <div className="rating">
           <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 w-4" />
