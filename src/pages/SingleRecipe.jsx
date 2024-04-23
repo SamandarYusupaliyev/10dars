@@ -36,6 +36,10 @@ function SingleRecipe() {
            <h2 className="text-xl font-bold">Cooking time:</h2>
            <span className=" font-normal  bg-slate-500 text-white w-24 text-center h-7  rounded-3xl cursor-pointer">60 minuts</span>
          </div>
+          <div className="items-center gap-4 mb-4">
+             <h2 className="text-xl font-bold mb-2">Method</h2>
+             <p className="font-normal">Palov haqida afsona 17455O‘zbekistonga tashrif buyurgan va haqiqiy o‘zbek palovini ta’mini tatib ko‘rmagan mehmon o‘zbek madaniyatining mohiatini va mehmondo‘stligini anglamagan hisoblanadi.Ehtimol u hali bu yerda bo‘lgan emas.</p>
+          </div>
       </div>
     )}
    </>
