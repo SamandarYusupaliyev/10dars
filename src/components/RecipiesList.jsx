@@ -7,14 +7,20 @@ function RecipiesList({recipies}) {
     {recipies.map((recipie)=>{
       return (
       <li key={recipie.id}>
-        <div className="card w-96 bg-base-100 shadow-xl mt-4">
+        <div className="card w-96 bg-base-100 shadow-xl mt-4 mb-5">
        <figure><img src={recipie.image} alt="Shoes" /></figure>
         <div className="card-body">
-        <h2 className="text-2xl font-bold">{recipie.title}</h2>
-        <p className="text-xl font-norma text-blue-500">{recipie.cookingTime}</p>
+        <h2 className="text-2xl font-bold -mt-3">{recipie.title}</h2>
+        <div className="rating">
+          <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 w-4" />
+          <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 w-4" checked />
+          <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 w-4" />
+          <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 w-4" />
+          </div>
+        <p className=" text-[16px] font-normal pl-1 bg-amber-300 rounded w-20 ">{recipie.cookingTime}</p>
         <p className="line-clamp-3 mb-2">{recipie.method}</p>
        <div className="card-actions flex-nowrap items-center">
-      <Link  to={`/singleRecipie/${recipie.id}`} className="btn btn-primary ">More</Link>
+      <Link  to={`/singleRecipie/${recipie.id}`} className="btn btn-primary w-20 font-bold ">More</Link>
        <button onClick={()=>deleteRecipie(recipie.id)} className="btn btn-secondary">
         <IoTrashOutline/>
         </button>
