@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { CiHeart } from "react-icons/ci";
 import {IoTrashOutline} from "react-icons/io5"
 import { data } from "autoprefixer"
 
@@ -8,7 +9,11 @@ function RecipiesList({recipies}) {
       return (
       <li key={recipie.id}>
         <div className="card w-96 bg-base-100 shadow-xl mt-4 mb-5">
-       <figure><img src={recipie.image} alt="Shoes" /></figure>
+        <CiHeart className="bg-orange-400 w-7 h-7"/>
+       <figure>
+        <img src={recipie.image} alt="Shoes"
+         />
+        </figure>
         <div className="card-body">
         <h2 className="text-2xl font-bold -mt-3">{recipie.title}</h2>
         <div className="rating">
