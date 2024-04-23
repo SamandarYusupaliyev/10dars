@@ -35,7 +35,7 @@ function ThemeContainer() {
   }
   return (
     <div className="mb-10 py-3">
-       <div className='align-element  flex justify-between items-center'>
+       <div className='align-element  justify-between flex items-center'>
         {/*colors */}
           <div className="flex flex-row gap-2">
             {colors.map((color)=>{
@@ -58,9 +58,9 @@ function ThemeContainer() {
               />
 
                 {/* sun icon */}
-                <FaSun  className="swap-on fill-current w-7 h-7" />
+                <FaSun  className="swap-on fill-current w-7 h-7 mt-2 mr-2" />
                {/* moon icon */}
-               <FaMoon className="swap-off fill-current w-7 h-7" />
+               <FaMoon className="swap-off fill-current w-7 h-7 mt-2 mr-2" />
             </label>
          </div>
        </div>
