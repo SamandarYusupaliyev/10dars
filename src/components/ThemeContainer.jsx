@@ -58,9 +58,9 @@ function ThemeContainer() {
               />
 
                 {/* sun icon */}
-                <FaSun  className="swap-on fill-current w-7 h-7 mt-2 mr-2" />
+                <FaSun  className="swap-on fill-current w-7 h-7 mt-2 mr-1" />
                {/* moon icon */}
-               <FaMoon className="swap-off fill-current w-7 h-7 mt-2 mr-2" />
+               <FaMoon className="swap-off fill-current w-7 h-7 mt-2 mr-1" />
             </label>
          </div>
        </div>
