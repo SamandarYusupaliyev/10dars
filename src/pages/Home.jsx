@@ -36,7 +36,7 @@ function Home() {
   return(
   <div>
     <h1 className="text-3xl font-bold">All Recipies-{recipies && recipies.length}</h1>
-    {recipies && <RecipiesList recipies={recipies} deleteRecipie={deleteRecipie}/>}
+    {recipies && <RecipiesList recipies={recipies}/>}
   </div>
   )
 }
