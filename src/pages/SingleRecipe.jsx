@@ -1,6 +1,7 @@
 import { doc, getDoc } from "firebase/firestore";
 import { useLoaderData } from "react-router-dom"
 import { db } from "../firebase/firebaseConfig";
+import { Link } from "react-router-dom";
 
 
 // loader
@@ -40,9 +41,11 @@ function SingleRecipe() {
              <h2 className="text-xl font-bold mb-2">Method</h2>
              <p className="font-normal text-[16px] text-slate-600">Palov haqida afsona 17455O‘zbekistonga tashrif buyurgan va haqiqiy o‘zbek palovini ta’mini tatib ko‘rmagan mehmon o‘zbek madaniyatining mohiatini va mehmondo‘stligini anglamagan hisoblanadi.Ehtimol u hali bu yerda bo‘lgan emas.</p>
           </div>
-         <div className="  grid justify-items-end items-center">
-            <button className="btn btn-primary ">Back</button>
-         </div>
+          <div className="text-right">
+           <Link to="/" className=" btn btn-primary ">
+            Back
+        </Link>
+      </div>
       </div>
     )}
    </>
