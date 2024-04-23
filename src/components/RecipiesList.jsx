@@ -8,8 +8,8 @@ function RecipiesList({recipies}) {
     {recipies.map((recipie)=>{
       return (
       <li key={recipie.id}>
-        <div className="card w-96 bg-base-100 shadow-xl mt-4 mb-5 rounded-lg">
-        <CiHeart className=" w-7 h-7   bg-orange-400"/>
+        <div className="card w-96 bg-base-100 shadow-xl mt-4 mb-5">
+        {/* <CiHeart className=" w-7 h-7 -top-3"/> */}
        <figure>
         <img src={recipie.image} alt="Shoes"
          />
