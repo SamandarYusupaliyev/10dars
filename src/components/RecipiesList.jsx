@@ -11,6 +11,7 @@ function RecipiesList({recipies}) {
        <figure><img src={recipie.image} alt="Shoes" /></figure>
         <div className="card-body">
         <h2 className="text-2xl font-bold">{recipie.title}</h2>
+        <p className="text-xl font-norma text-blue-500">{recipie.cookingTime}</p>
         <p className="line-clamp-3 mb-2">{recipie.method}</p>
        <div className="card-actions flex-nowrap items-center">
       <button className="btn btn-primary ">More</button>

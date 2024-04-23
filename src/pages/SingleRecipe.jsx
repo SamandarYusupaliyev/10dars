@@ -27,19 +27,22 @@ function SingleRecipe() {
         <img className="w-full h-[450px] mb-6" src={data.image} alt="" />
          <div className="flex gap-4 items-center mb-4">
           <h2 className="text-xl font-bold items-center">Ingredients:</h2>
-              <span className=" font-normal  bg-slate-500 text-white w-20 text-center h-7  rounded-3xl cursor-pointer">guruch</span>
-              <span className=" font-normal  bg-slate-500 text-white w-20 text-center h-7  rounded-3xl cursor-pointer">piyoz</span>
-              <span className=" font-normal  bg-slate-500 text-white w-20 text-center h-7  rounded-3xl cursor-pointer">yog'</span>
-              <span className=" font-normal  bg-slate-500 text-white w-20 text-center h-7  rounded-3xl cursor-pointer">go'sht</span>
+            <button type="submit" className="btn">tuz</button>
+            <button type="submit" className="btn">guruch</button>
+            <button type="submit" className="btn">go'sht</button>
+            <button type="submit" className="btn">sabzi</button>
          </div>
          <div className="flex items-center gap-4 mb-4">
            <h2 className="text-xl font-bold">Cooking time:</h2>
-           <span className=" font-normal  bg-slate-500 text-white w-24 text-center h-7  rounded-3xl cursor-pointer">60 minuts</span>
+           <button type="submit" className="btn">60 minuts</button>
          </div>
           <div className="items-center gap-4 mb-4">
              <h2 className="text-xl font-bold mb-2">Method</h2>
-             <p className="font-normal">Palov haqida afsona 17455O‘zbekistonga tashrif buyurgan va haqiqiy o‘zbek palovini ta’mini tatib ko‘rmagan mehmon o‘zbek madaniyatining mohiatini va mehmondo‘stligini anglamagan hisoblanadi.Ehtimol u hali bu yerda bo‘lgan emas.</p>
+             <p className="font-normal text-[16px] text-slate-600">Palov haqida afsona 17455O‘zbekistonga tashrif buyurgan va haqiqiy o‘zbek palovini ta’mini tatib ko‘rmagan mehmon o‘zbek madaniyatining mohiatini va mehmondo‘stligini anglamagan hisoblanadi.Ehtimol u hali bu yerda bo‘lgan emas.</p>
           </div>
+         <div className="  grid justify-items-end items-center">
+            <button className="btn btn-primary ">Back</button>
+         </div>
       </div>
     )}
    </>
