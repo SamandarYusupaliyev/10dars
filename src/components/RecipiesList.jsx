@@ -1,14 +1,7 @@
 import { Link } from "react-router-dom"
 import {IoTrashOutline} from "react-icons/io5"
 import { data } from "autoprefixer"
-function RecipiesList({recipies}) {
- 
-  const deleteRecipie =(id)=>{
-    console.log(id);
-  }
-
-
-
+function RecipiesList({recipies,deleteRecipie}) {
   return <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
     {recipies.map((recipie)=>{
       return (
