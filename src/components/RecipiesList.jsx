@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { CiHeart } from "react-icons/ci";q
+import { CiHeart } from "react-icons/ci";
 import {IoTrashOutline} from "react-icons/io5"
 import { data } from "autoprefixer"
 
